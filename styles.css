@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(0deg, rgba(34, 195, 153, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+main{
+    display:flex;
+    justify-content: space-between;
+}
+
+
+.rest {
+    height: 300px;
+}
+
+.weather-info {
+    max-width: 55%;
+    margin-left: 3rem;
+}
+
+.weather-info__city {
+    font-size: 4rem;
+    line-height: 1;
+    font-weight: 500;
+    margin-top: 1rem;
+}
+
+.weather-info__date {
+    margin-top: 0.8rem;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.weather-info__clock {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.weather-info__state {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1;
+    margin-top: 0.8rem;
+}
+
+.weather-info__celsiusBox {
+    margin-top: 0.8rem;
+    display: flex;
+}
+
+.weather-info__celsius {
+    font-size: 4rem;
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.image {
+    margin-right: 1.2rem;
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.image2 {
+    margin-right: 1.2rem;
+    max-width: 50px;
+    max-height: 50px;
+    color:#000000
+}
+
+
+.search-box {
+    height: 30px;
+    max-width: 250px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    border: none;
+    border-bottom: 2px solid #f5f5f5;
+    padding: 6px 12px;
+    visibility: hidden;
+}
+
+
+.search-box input {
+    border: none;
+    max-width: 200px;
+    background-color: transparent;
+    font-size: 1.4rem;
+    outline: none;
+}
+
+.search-box input::focus {
+    outline: 0;
+}
+
+.search-box__icon {
+
+    height: 20px;
+    min-width: 18px;
+    background-image: url(./img/search-icon.afa8a864e76e9c624eaedad03c287834.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    margin-top: 5px;
+}
+/* Weather details , humidity and that stuff */
+
+.weather-details__card{
+    display: flex;
+    margin-top:0.8rem;
+    margin-right:0.8rem;
+    font-size: 1.2rem;
+}
+
+.image3{
+    min-height: 2rem;
+    max-width: 2rem;
+}
+
+.weather-details__state{
+    margin-left:0.8rem;
+}
+
+/* For the card of the weather */
+
+.weather-day{
+    position:relative;
+    display:flex;
+    margin-left:3rem;
+    margin-top:1rem;
+    height:17rem;
+}
+
+
+.weather-day__card{
+
+    border-radius: 2px;
+    background-color: #fff;
+    width: 10%;
+    border-radius:20px;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content:first baseline;
+    align-items: right;
+    padding:1rem;
+    flex:1;
+    background: rgba(255,255,255,0.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.weather-day__card h4{
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.weather-day__max{
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+.weather-day__min{
+    font-size: 1.5rem;
+    font-weight: 700;
+}
