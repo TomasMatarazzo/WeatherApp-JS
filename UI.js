@@ -17,7 +17,7 @@ export class UI {
         if (this.box.childElementCount > 1)
             this.box.removeChild(document.querySelector(".image"))
 
-        this.temp.textContent = weatherData.temp + " °C"
+        this.temp.textContent = Math.round(weatherData.temp) + "°C"
         this.city.textContent = weatherData.city;
         this.description.textContent = weatherData.description;
         this.date.textContent = weatherData.date;
@@ -30,7 +30,6 @@ export class UI {
 
     renderDayCard( {min,max,day,icon}){
         if (!min) return;
-
         const card = document.createElement("div");
         card.className = "weather-day__card"
         card.innerHTML = `
@@ -45,6 +44,11 @@ export class UI {
         else{
           this.dailyBox.lastElementChild.insertAdjacentHTML("afterEnd",card.outerHTML);
         }
+    }
+
+    removeChildDayCard(){
+      while (this.dailyBox.hasChildNodes())
+        this.dailyBox.removeChild(this.dailyBox.firstChild)
     }
 
     getIcon(code) {

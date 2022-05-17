@@ -31,6 +31,7 @@ async function  getWeatherData(city) {
     const dailyData = await weather.getDailyWeather();
     const ui = new UI()
     ui.renderWeatherDetail(data);
+    ui.removeChildDayCard()
     dailyData.forEach((data,index)=>{
         if (index == 7) return;
         console.log(index)
